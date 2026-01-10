@@ -1,0 +1,66 @@
+{
+  "id": "asdf",
+  "title": "Radio Antenna",
+  "cover": "cover image",
+  "about": "About the Project",
+  "what": "What we are Doing",
+
+  "team": [
+    {
+      "name": "Member1",
+      "photo": "photo location1",
+      "type": "member"
+    },
+    {
+      "name": "Member2",
+      "photo": "photo location2",
+      "type": "member"
+    },
+    {
+      "name": "Supervisor1",
+      "photo": "photo location3",
+      "type": "supervisor"
+    }
+  ],
+
+  "next": "what we do next",
+
+  "photos": [
+    "photo1 loc",
+    "photo2 loc",
+    "photo3 loc",
+    "photo4 loc"
+  ],
+
+  "resources": [
+    {
+      "title": "resource title 1",
+      "description": "Description of the resource",
+      "link": "url of the link"
+    },
+    {
+      "title": "resource title 2",
+      "description": "Description of the resource",
+      "link": "url of the link"
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "finding 1",
+      "description": "Description of the finding",
+      "assets": [
+        "url 1",
+        "url 2"
+      ]
+    },
+    {
+      "title": "finding 2",
+      "description": "Description of the finding",
+      "assets": [
+        "url 1",
+        "url 2"
+      ]
+    }
+  ]
+}

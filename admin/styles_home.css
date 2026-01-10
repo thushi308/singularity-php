@@ -1,0 +1,219 @@
+*{
+    font-family: Arial, sans-serif;
+    box-sizing:border-box;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: #00000000;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #1a1a1a00;
+    padding: 0 0 0 0;
+    text-align: center;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.nav {
+    
+    list-style-type: none;
+    overflow:hidden;
+    text-align: center;
+    background-color: #33333359;
+    
+}
+
+
+.nav li a {
+    float:left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 28px;
+    background-color: #33333300;
+    transition: background-color 0.3s ease;
+}
+
+.nav li a:hover {
+    background-color: #692dc9b6;
+}
+
+
+.main {
+    padding: 20px;
+    flex:75%;
+    background-color: rgba(12, 9, 53, 0.459);
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(30, 30, 30, 0);
+}
+
+.aside {
+    float:left;
+    background-color: rgba(255, 255, 0, 0.788);
+    color: #000;
+    padding: 20px;
+    overflow: auto;
+    display:flex;
+    flex-wrap:wrap;
+    flex:25%;
+    flex-direction: column;
+}
+
+.aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+section#gallery {
+    background-color: #00000000;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    text-align: center;
+    margin: 0 10px; 
+    width: 200px; 
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+}
+
+.gallery figcaption {
+    margin-top: 10px; /* Add space between image and description */
+    font-style: italic;
+}
+.gallery p a:link,.gallery a:visited{
+    color: yellow
+}
+.research-papers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.research-papers article {
+    background-color: rgba(42, 42, 42, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: left;
+}
+
+.research-papers article h3 {
+    margin-top: 0;
+}
+
+.research-papers article a {
+    color: #00f;
+    text-decoration: none;
+    font-weight: bold;
+}
+.research-papers article a:link,.research-papers article a:visited { 
+    color: yellow
+}
+
+section#contact {
+    color:white;
+    background-color: rgba(42, 42, 42, 0);
+}
+section#contact a:link,section#contact a:visited {
+    color: yellow
+}
+
+.footer {
+    background-color: rgba(26, 26, 26, 0.9);
+    text-align: center;
+    padding: 10px;
+    width:100%;
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.8);
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .aside {
+        flex:100%;
+        text-align: center;
+    }
+
+}
+@media screen and (max-width: 672px) {
+    .nav  {
+       flex-direction: column;
+    }
+    .nav li a {
+        width:100%;
+    }
+    .newsletter form input{
+        width:100%;
+    }
+}
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.activities article {
+    
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align:center;
+}
+.activities article a:link,.activities article a:visited { 
+    color: yellow
+}
+

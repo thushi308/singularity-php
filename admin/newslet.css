@@ -1,0 +1,26 @@
+.newsletter input{
+    width:50%;
+    height:35px;
+    font-size: medium;
+}
+#submit {
+    width:20%;
+    height:35px;
+    font-size: medium;
+    color: black;
+    
+}
+@media screen and (max-width: 800px) {
+    #submit {
+        width:20%;
+    }
+
+}
+@media screen and (max-width: 672px) {
+    #submit {
+        width:30%;
+    }
+    .newsletter input{
+        width:75%;
+    }
+}
