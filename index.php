@@ -12,7 +12,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <?php include "header.html"; ?>
+    <?php include "classes/header.html"; ?>
 
     <main>
         <div class="hero-section-bg"></div>
