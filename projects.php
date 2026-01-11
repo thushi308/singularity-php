@@ -1,7 +1,8 @@
 <?php
+include "location_prefixes.php";
 $loc = $_GET['loc'];
 #$loc = "temp.json";
-$file = file_get_contents($loc);
+$file = file_get_contents($projects_location_prefix . $loc);
 $obj = json_decode($file);
 ?>
 
@@ -15,8 +16,8 @@ $obj = json_decode($file);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
-    <?php include "classes/stylesheet.html"; ?>
-    <script src="script.js"></script>
+    <?php include $includes_location_prefix . "stylesheet.html"; ?>
+    <script src="<?php echo $static_js_location_prefix; ?>script.js"></script>
 <style>
         .resource-item:hover {
             transform: scale(1.03); /* Makes the item slightly larger */
@@ -32,7 +33,7 @@ $obj = json_decode($file);
     </style>
 </head>
 <body>
-    <?php include "classes/header.html"; ?>
+    <?php include $includes_location_prefix . "header.html"; ?>
     <main>
         <section class="section" style="text-align: center; padding-bottom: 0;">
             <div>
@@ -183,7 +184,7 @@ $obj = json_decode($file);
             </div>
         </section>
 
-        <?php include "classes/footer.html"; ?>
+        <?php include $includes_location_prefix . "footer.html"; ?>
     </main>
 </body>
 </html>

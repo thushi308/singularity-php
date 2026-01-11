@@ -1,92 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="icon" type="image/x-icon" href="admin/images/favicon.ico">
-    <link rel="stylesheet" href="admin/styles2.css">
-    </head>
-<div class="header">
-    <img src="admin/images/Logo.png" style="width:247.217px;height:150px;">
-</div>
-<div class="nav">
-    <li><a href="singular.php">Home</a></li>
-    <li><a href="gallery.php" onmouseover="this.style.backgroundColor='#692dc9b6'" onmouseout="this.style.backgroundColor='#3a196e8a'" style="background-color:#3a196e8a;">Gallery</a></li>
-    <li><a href="research.php" >Blogs</a></li>
-    <li><a href="activities.php">Activities</a></li>
-    <li><a href="#contact" style="float:right">Contact Us</a></li>
-    
-    
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="body">
-    
-    <div class="main">
-        <div class="dropdown">
-            <button class="dropbtn">Astronomy &nbsp;<i class="arrow down"></i></button>
-            <div class="dropdown-content">
-                <a href="gallery_events.php">Events/Activities</a>
-            </div>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Turret+Road:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Gallery | Singularity</title>
+
+    <link rel="stylesheet" href="static/css/gallery-page.css" />
+    <link rel="stylesheet" href="static/css/gallery-global.css" />
+  </head>
+
+  <body>
+    <!-- // navbar from thushiyanth code  -->
+
+    <!-- IMPORTANT NOTE: I have added a class .main-navbar for the header navbar because it was clashing with the gallery nav elements. -->
+     
+    <?php include "classes/header.html"; ?>
+
+    <!-- // navbar from thushiyanth code   -->
+
+    <main>
+      <h1>Gallery | Singularity</h1>
+
+      <section class="intro">
+        <div class="intro-box">
+          <h2>Welcome to the Singularity Gallery</h2>
+          <p>
+            Explore moments from Astrophotography, Events, and Behind The
+            Scenes.
+          </p>
         </div>
-        <section id="about">
-            <h2>Gallery</h2>
-            <p>Welcome to our gallery of astronomical wonders, featuring a mix of stunning images captured by both amateur astronomers and educational sources. Here, you'll find photos of distant galaxies, colorful nebulae, bright star clusters, and other amazing celestial objects. Each image offers a glimpse into the vastness of the universe and aims to inspire curiosity and learning about the night sky. Enjoy your journey through the cosmos!</p>
-        </section>
-        <section id="gallery">
-            
-            
-            <div class="gallery">
-                <?php
-                    $images=file("admin/gallery/gallery.txt");
-                    $length=count($images);
-                    $count=$length-3;
-                    $sub_img="";
-                    $sub_caption="";
-                    $flag=0;
-                    while($count>=0)
-                    {
-                        $sub_img=trim($images[$count]);
-                        $sub_img="'admin/uploads/".$sub_img."'";
-                        $count=$count+1;
-                        if(trim($images[$count])=="astro")
-                        {
-                            $flag=1;
-                            $count=$count+1;
-                            $sub_caption=trim($images[$count]);
-                            $count=$count+1;
-                            echo "<figure><img src=".$sub_img." ><figcption style= 'margin-top: 10px; font-style: italic' >".$sub_caption."</figcaption></figure>";
-                        }
-                        else{$count=$count+2;}
-                        $count=$count-6;
-                    }
-                    if($flag==0){echo "<p> No images have been uploaded yet. <p>";}
-                
-                ?>
-            </div>
-        </section>
+      </section>
+
+      <nav class="category-nav">
+        <ul>
+          <li data-category="astrophotography" class="active">
+            Astrophotography
+            <select class="year-dropdown">
+              <option value="all">All Time</option>
+            </select>
+          </li>
+          <li data-category="events">
+            Events
+            <select class="year-dropdown">
+              <option value="all">All Time</option>
+            </select>
+          </li>
+          <li data-category="behind-the-scenes">
+            Behind The Scenes
+            <select class="year-dropdown">
+              <option value="all">All Time</option>
+            </select>
+          </li>
+          <li data-category="posters">
+            Posters
+            <select class="year-dropdown">
+              <option value="all">All Time</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="gallery-section">
+        <div class="gallery-cards" id="galleryContainer"></div>
+      </section>
+    </main>
+
+    <div class="image-modal" id="imageModal">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <span class="nav-btn prev" id="prevBtn">&#10094;</span>
+      <img class="modal-content" id="modalImage" />
+      <span class="nav-btn next" id="nextBtn">&#10095;</span>
+      <div class="modal-caption" id="modalCaption"></div>
     </div>
-   
-</div>
-<div class="body">
-    <div id="starfield"></div>
-    <script src="admin/script.js"></script>
-    <div class="footer">
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p><b class="pr-2"><i class="fa-solid fa-envelope"></i> Email: </b>singularity@iiserkol.ac.in</p>
-        <p><b class="pr-2"><i class="fa-brands fa-github"></i> Github:</b> <a class="text-yellow-400" target="_blank" href="https://github.com/Singularity-Astro-Club-of-IISER-K">Singularity-Astro-Club-of-IISER-K</a></p>
-        <p><b class="pr-2"><i class="fa-brands fa-linkedin"></i> LinkedIn:</b> <a class="text-yellow-400" target="_blank" href="https://www.linkedin.com/in/singularity-astro-club-of-iiser-kolkata-7538382a2/">Singularity</a></p>
-        <p><b class="pr-2"><i class="fa-brands fa-twitter"></i> Twitter:</b> <a class="text-yellow-400"  target="_blank" href="https://twitter.com/singularity_ik">singularity_ik</a></p>
-        <p><b class="pr-2"><i class="fa-brands fa-instagram"></i> Instagram:</b> <a class="text-yellow-400" target="_blank" href="https://www.instagram.com/singularity_iiserk/">singularity_iiserk</a></p>
-    </section>
-    <p  style="color:white">&copy; 2024<span id="demo"></span> Singularity. All rights reserved.</p>
-</div>
-</div>
+
+    <!-- footer by thushiyanth  -->
+
+    <?php include "classes/footer.html"; ?>
+
+    <script type="module" src="static/js/gallery-page.js"></script>
+    <script src="static/js/global-js.js"></script>
+  </body>
 </html>
-<script>
-    const d = new Date();
-    if(d.getFullYear()>2024){
-        document.getElementById("demo").innerHTML =" - "+ d.getFullYear();
-    }
-</script>

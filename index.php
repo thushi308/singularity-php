@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <?php include "classes/stylesheet.html"; ?> 
     <!--<link rel="stylesheet" href="style.css">-->
-    <script src="script.js"></script>
+    <script src="static/js/script.js"></script>
 </head>
 <body>
     <?php include "classes/header.html"; ?>

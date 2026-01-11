@@ -1,0 +1,515 @@
+/* 
+This is global css I'm (Prashant) creating/editing. 
+This will contain the styling for navbar and footer only as these will be same for all pages. 
+
+Suggestion: create html and css different for other pages except navbar and footer. 
+
+Use this for main colors to use. 
+
+*/
+
+:root {
+  --primary-color-1: #3b4e6c;
+  --primary-color-2: #ffab1a;
+  --secondary-color-1: #3b4e6c;
+  --secondary-color-2: #3b4e6c;
+  --accent-color-1: #ff7518;
+  --accent-color-2: hsl(24, 100%, 50%);
+
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --font-size-1: 1rem;
+  --font-size-2: 1.5rem;
+  --font-size-3: 2rem;
+  --text-color: #e5e5e5;
+
+  --section-odd-background-color: #000;
+  --section-even-background-color: #000;
+  --section-padding: 1.4rem;
+  --section-space-padding: 2rem;
+
+  --hero-section-height: calc(100vh - 70px);
+
+  --card-border-radius: 0 0 5px 5px;
+  --card-background-color: hsl(
+    from var(--section-even-background-color) h s calc(l + 12)
+  );
+  --card-div-padding: calc((5 / 16) * 1rem) calc((10 / 16) * 1rem);
+  --card-page-link-color: #ff7518;
+  --card-page-link-hover-color: hsl(
+    from var(--accent-color-1) h s calc(l - 20)
+  );
+  --card-page-link-transition: all 0.3s ease-in-out;
+  /*--cards-container-scrollbar-color: #3a317a;*/
+  --cards-container-scrollbar-color: var(--accent-color-1);
+  --cards-container-scrollbar-width: 0.2rem;
+  /* --cards-container-scrollbar-color: linear-gradient(to right, hsl(from var(--accent-color-1) calc(h + 5) s calc(l - 20)), hsl(from var(--section-even-background-color) calc(h - 5) s calc(l + 10)));
+    --cards-container-scrollbar-width: calc((6 / 16) * 1rem);*/
+
+  --call-to-action-padding: 10px 20px;
+  --call-to-action-background-color: #ff7518;
+  --call-to-action-color: var(--section-even-background-color);
+  --call-to-action-border-radius: 9999px;
+  --call-to-action-border: 2px solid var(--accent-color-2);
+  --call-to-action-transition: all 0.3s ease-in-out;
+  --call-to-action-hover-background-color: #0c0a1a;
+  --call-to-action-hover-color: #ff7518;
+
+  --nav-background-color: hsl(
+    from var(--section-even-background-color) h s calc(l + 20)
+  );
+  --nav-sidebar-cut-width: 1170px;
+
+  --footer-background-color: #16122f;
+
+
+
+  /* $ gallery-page special - PRASHANT KUMAR $ */
+  --gallery-bg-color: rgb(40, 40, 40);
+  --gallery-accent-color: #ff6666;
+  --gallery-overlay-bg: rgba(0, 0, 0, 0.7);
+  --gallery-modal-overlay-color: rgba(0, 0, 0, 0.9);
+
+  --gallery-card-radius: 6px;
+  --gallery-transition-speed: 0.3s;
+  --gallery-main-width: 80vw;
+  --gallery-max-main-width: 1200px;
+  --gallery-img-height: 300px;
+  --gallery-modal-padding-top: 50px;
+
+  --gallery-body-font: "Turret Road", sans-serif;
+  --gallery-heading-font: "Syne Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-navbar, footer {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  color: #e5e5e5;
+
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.1rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ============== navbar (designed by Thushiyanth) ============= */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 30px;
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px 0 20px;
+  background-color: var(--nav-background-color);
+  color: var(--accent-color);
+  position: relative;
+  top: 0;
+  height: 70px;
+  font-size: 1.25rem;
+  z-index: 100;
+}
+
+.main-navbar input#sidebar-toggle {
+  display: none;
+}
+
+.main-navbar > div:first-child {
+  width: 100px;
+  height: 40px;
+  padding: 5px 0;
+  box-sizing: content-box;
+}
+
+.main-navbar > div > img {
+  height: 130%;
+}
+
+/*.main-navbar > div > svg {
+    height: 100%;
+}
+
+.main-navbar > div > svg > path {
+    fill: var(--accent-color);
+}*/
+
+.main-navbar > :first-child,
+.main-navbar .sidebar > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  letter-spacing: 0.1em;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.main-navbar a,
+.main-navbar .sidebar > div > div > :first-child {
+  text-decoration: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 20px 15px;
+  line-height: 30px;
+}
+
+.main-navbar .open-sidebar-button,
+.main-navbar .close-sidebar-button {
+  cursor: pointer;
+  display: none;
+}
+
+.main-navbar .open-sidebar-button > svg {
+  fill: var(--text-color);
+  width: fit-content;
+  display: block;
+}
+
+.main-navbar .close-sidebar-button > svg {
+  fill: var(--text-color);
+  width: fit-content;
+  display: block;
+}
+
+.main-navbar .sidebar > div > div {
+  position: relative;
+  text-align: center;
+}
+
+.main-navbar .sidebar > div > div a {
+  padding-bottom: 0;
+}
+
+.main-navbar .sidebar > div > div > .dropdown {
+  background: hsl(from var(--nav-background-color) h s calc(l + 10));
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+
+  padding-bottom: 20px;
+}
+
+.main-navbar .sidebar > div > div > .dropdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-navbar .sidebar > div > div:hover > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@font-face {
+  font-family: "InterVariable";
+  src: url("Inter-VariableFont_slnt,wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+.main-navbar .sidebar > div > div > :first-child > span {
+  /*display: inline-block;
+    transform: scaleX(1.7) scaleY(0.8) translateY(7px) translateX(3px);*/
+  position: relative;
+}
+
+.main-navbar .sidebar > div > div > :first-child > span > svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1170px) {
+  .main-navbar .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 65%;
+    max-width: 250px;
+    height: 100%;
+    background-color: hsl(from var(--nav-background-color) h s calc(l + 5));
+    z-index: 10;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  .main-navbar .sidebar > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .main-navbar a,
+  .main-navbar .sidebar > div div {
+    width: 100%;
+    text-align: center;
+  }
+  .main-navbar a,
+  .main-navbar .sidebar > div > div > :first-child {
+    padding: 0.25rem;
+  }
+  .main-navbar .close-sidebar-button {
+    /* padding: 10px; */
+    margin: 20px;
+    align-self: flex-end;
+    text-align: left;
+    position: sticky;
+    top: 20px;
+  }
+  .main-navbar .open-sidebar-button,
+  .main-navbar .close-sidebar-button {
+    display: block;
+  }
+  .main-navbar #sidebar-toggle:checked ~ .sidebar {
+    right: 0;
+  }
+  /*.main-navbar.sidebar > div > div a {
+        padding: 1rem;
+    }*/
+  .main-navbar .sidebar > div > div > .dropdown {
+    position: relative;
+    transform: translateX(0) translateY(0);
+    left: 0;
+    padding: 0rem 0;
+    display: grid;
+    grid-template-rows: 0fr;
+  }
+  .main-navbar .sidebar > div > div > .dropdown > div {
+    overflow: hidden;
+  }
+  .main-navbar .sidebar > div > div:hover > .dropdown {
+    transform: translateX(0) translateY(0);
+    grid-template-rows: 1fr;
+    padding: 0.5rem 0 0.75rem 0;
+  }
+  .main-navbar .sidebar > div > div > .dropdown > div {
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+/* ====== FOOTER STYLES ====== */
+
+footer > div {
+  background-color: var(--footer-background-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 350;
+  gap: 2rem;
+  padding: var(--section-padding);
+}
+
+footer > div .footer-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem 0 2rem 0;
+}
+
+footer > div a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer > div * {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+footer > div > div {
+  flex: 1 1 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+}
+
+footer > div > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > div > div > div {
+  width: 100%;
+  height: 100%;
+}
+
+footer > div .footer-heading {
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+footer > div > div > :first-child > .social-media-handles .footer-heading {
+  flex: 1 0 100%;
+}
+
+footer > div > div > :first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer > div > div > :first-child > .social-media-handles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  container-name: social-media-handles-container;
+  container-type: inline-size;
+}
+
+footer > div > div > :first-child > .social-media-handles > a > i {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  > span {
+    display: block;
+  }
+}
+
+footer > div > div > :first-child > .social-media-handles > a > i > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 50%;
+}
+
+@container social-media-handles-container (max-width: 500px) {
+  a > span {
+    display: none !important;
+  }
+  a > i {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+footer > div > div > .quick-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  container-type: inline-size;
+  container-name: quick-links-container;
+}
+
+footer > div > div > .quick-links > :first-child {
+  grid-column: 1 / -1;
+  padding: 0.5rem 0;
+}
+
+footer > div > div > .quick-links > a {
+  padding: 0.5rem 0;
+}
+
+footer > div > div > .quick-links > a > i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer > div > div > .quick-links > a > i > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  fill: white;
+}
+
+footer > div > div > .quick-links > a > i > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: none;
+}
+
+@container quick-links-container (max-width: 100px) {
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer > div > div > .contact-us {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: revert;
+}
+
+footer > div > div > .contact-us > a {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+footer > div > div > .contact-us > a > i {
+  flex: 1 0 20px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer > div > div > .contact-us > a > i > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  fill: white;
+}
+
+footer > div > div > .footer-img {
+  max-width: 120px;
+}
+
+footer > div > div > .footer-img > img {
+  /* height: 100%; */
+  width: 100%;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+footer > .copyrights {
+  padding: 1rem;
+  text-align: center;
+  flex: 1 1 100%;
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 400;
+  background: black;
+}
