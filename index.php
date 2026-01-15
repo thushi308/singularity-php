@@ -1,3 +1,4 @@
+<?php include "location_prefixes.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,34 +16,45 @@
     <?php include "classes/header.html"; ?>
 
     <main>
-        <div class="hero-section-bg"></div>
+        <div class="hero-section-bg" style="background-image: url('<?php echo $static_images_location_prefix; ?>hero_image.jpg')"></div>
         <section class="section hero-section">
             <div>
-                <h1 class="">SINGULARITY - The IISER-K Astro Club</h1>
-                <p class="">Where curiosity meets the cosmos. Dive into astronomy, Astrophysics and beyond with our ever-growing community and together let's keep looking up!</p>
-                <a href="#upcoming-events" class="call-to-action">Explore Our Events</a>
+                <h1 class="">SINGULARITY<br>The Astronomy Club of IISER-K</h1>
+                <p class="">Born from a shared dream in 2023, Singularity has grown to IISER Kolkata's vibrant hub for exploring cosmos beyond classrooms!</p>
+                <a href="#upcoming-events" class="call-to-action">Upcoming Events</a>
                 <div class="credits">
-                    Image By Incalculas
+                    <span style="font-style: normal; font-size: inherit;">Photo Credits:</span> Shantonu Dutta (IISER-K)
                 </div>
             </div>
         </section>
         <section class="section about-section">
             
             <div class="card-img-container">
-                <img src="about_image.jpeg" alt="something">
+                <img src="<?php echo $static_images_location_prefix; ?>aboutus.jpg" alt="something">
             </div>
             <div class="section-header">
-                <h2 class="">About Us</h2>
-                <p class="">"Singularity" is the official Astronomy club of Indian Institute of Science Education and Research (IISER) Kolkata. Founded in 2023 by a bunch of astrophiles, currently it is one of the most active clubs in the institute. Its main aim is to foster and cultivate a genuine interest in astronomy among students and enhance students' understanding of the subject. We organise regular stargazing sessions, lectures, workshops, and seminars with experts in the field of astronomy and foster a sense of community and camaraderie among students who share a passion for astronomy, creating a supportive and welcoming environment.</p>
-                <a href="#about" class="call-to-action">Learn more</a>
+                <h2 class="">Who are We?</h2>
+                <div class="">
+                    <span style="display: none; font-style: italic;">Singularity</span>Singularity is the official Astronomy club of the Indian Institute of Science Education and Research (IISER) Kolkata. Founded in 2023 by a group of passionate astrophiles, we have consistently been one of the most active clubs in our institute, with a group of equally active and passionate members.<br><br>
+                    We aim to foster passion and genuine interest in astronomy amongst the college community. We hold<br>
+                    <ul>
+                        <li>regular stargazing sessions that provide demonstrations in handling telescopes along with practical astronomy.</li>
+                        <li>seminars where students talk about their theses/ internship projects - or anything they like to teach!</li>
+                        <li>interviews with renowned scientists, faculties, and postdoc researchers.</li>
+                        <li>workshops on astronomical data analysis and image processing techniques.</li>
+                        <li>Science projects, where students learn to explore beyond textbooks</li>
+                        <li>Quizzes, Discussion Sessions and more!</li>
+                    </ul><br>
+                </div>
+                <a href="aboutus.php" class="call-to-action">Learn more</a>
             </div>
         
         </section>
 
         <section class="section projects-section">
             <div class="section-header">
-                <h2 class="">Projects</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nam.</p>
+                <h2 class="">Our Projects</h2>
+                <p class="">Building, Observing, and Analyzing our way through the Universe. One step at a time ; )</p>
             </div>
             <div class="projects-container">
                 <div class="project">
@@ -50,26 +62,26 @@
                         <img src="pro1.jpeg" alt="someiamge">
                     </div>
                     <div class="project-details">
-                        <h3 class="project-title">Project Title</h3>
+                        <h3 class="project-title">Radio Antenna Project</h3>
                         <p class="project-description">Astronomy is science that will challenge your imagination. How many stars in a galaxy? How many galaxies in the known universe? How many strange worlds are out there on other planets, orbiting other stars, and what are they like? Is there life on planets besides Earth? The distances are mind-boggling; the numbers are immense. </p>
-                        <a class="card-page-link project-page-link" href="">Know more</a>
+                        <a class="card-page-link project-page-link" href="projects.php?loc=radio.json">Know more</a>
                     </div>
                 </div>
             </div>
             <div>
-                <a href="#blog" class="call-to-action">View All</a>
+                <a href="" class="call-to-action" style="display: none;">View All</a>
             </div>
         </section>
         <section class="section featured-events-section">
             <div class="section-header">
                 <h2 class="">Featured Events</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nam.</p>
+                <p class="">Seminars, Workshops, Quizzes, Stargazing, Outreach, and many more!</p>
             </div>
             <div class="cards-container">
                 <!-- swiper js for featured events cards-->
                 <div class="card">
                     <div class="card-img-container">
-                        <img src="fea1.jpg" alt="someimage">
+                        <img src="<?php echo $static_images_location_prefix; ?>featured_event_1.jpg" alt="someimage">
                     </div>
                     <div class="card-details-container">
                         <!-- event details -->
@@ -80,34 +92,45 @@
                 </div>
                 <div class="card">
                     <div class="card-img-container">
-                        <img src="fea2.jpg" alt="someimage">
+                        <img src="<?php echo $static_images_location_prefix; ?>featured_event_2.jpg" alt="someimage">
                     </div>
                     <div class="card-details-container">
                         <!-- event details -->
-                        <div class="heading">State of the universe</div>
-                        <div class="description">Talk by Prof. Koushik Dutta</div>
+                        <div class="heading">A QnA session</div>
+                        <div class="description">Talk: by Rohan Kumar</div>
                         <a href="" class="card-page-link">Know More</a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img-container">
-                        <img src="fea3.jpg" alt="someimage">
+                        <img src="<?php echo $static_images_location_prefix; ?>featured_event_3.jpg" alt="someimage">
                     </div>
                     <div class="card-details-container">
                         <!-- event details -->
                         <div class="heading">Observing Total Lunar Eclipse 2025</div>
-                        <div class="description">Talk by Prof. Koushik Dutta</div>
+                        <div class="description">Date: 7<sup><span style="font-size: 0.7rem;">th</span></sup> September, 2025</div>
                         <a href="" class="card-page-link">Know More</a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img-container">
-                        <img src="fea4.jpg" alt="someimage">
+                        <img src="<?php echo $static_images_location_prefix; ?>featured_event_4.jpg" alt="someimage">
                     </div>
                     <div class="card-details-container">
                         <!-- event details -->
                         <div class="heading">Astrophotography</div>
-                        <div class="description">workshop: by Shantonu Dutta</div>
+                        <div class="description">Workshop: by Shantonu Dutta</div>
+                        <a href="" class="card-page-link">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="<?php echo $static_images_location_prefix; ?>featured_event_5.jpg" alt="someimage">
+                    </div>
+                    <div class="card-details-container">
+                        <!-- event details -->
+                        <div class="heading">What makes the Sun a Magnet?</div>
+                        <div class="description">Talk: by Chitradeep Saha</div>
                         <a href="" class="card-page-link">Know More</a>
                     </div>
                 </div>
@@ -119,7 +142,7 @@
         <section id="upcoming-events" class="section calendar-section">
             <div class="section-header">
                 <h2 class="">Upcoming Events</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nam.</p>
+                <p class="">Discover what's next in our radar!</p>
             </div>
             <div class="cards-container">
                 <!-- swiper js for calendar cards or normal scrolling-->
@@ -184,15 +207,15 @@
         </section>
         <section class="section youtube-section">
             <div class="section-header">
-                <h2 class="">Youtube Videos</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nam.</p>
+                <h2 class="">Our YouTube Channel</h2>
+                <p class="" style="display: none;"></p>
             </div>
             <div class="youtube-card">
                 <!-- youtube cards -->
                 <iframe width="" height="400px" src="https://www.youtube-nocookie.com/embed/hbA5q-j5hNg?si=cNFx2-jgXQ_GDAey" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
-        <section class="section blog-section">
+        <section class="section blog-section" style="display: none;">
             <div class="section-header">
                 <h2 class="">Latest Blog</h2>
                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nam.</p>
@@ -229,7 +252,7 @@
         <section class="gallery-section">
             <div class="section-header">
                 <h2 class="">Gallery</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nam.</p>
+                <p class="">Moments and Memories </p>
             </div>
             <div class="images-container">
                 <div>

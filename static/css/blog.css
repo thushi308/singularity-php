@@ -1,0 +1,289 @@
+ /* -------------------------------------------
+       1. CSS VARIABLES & BASE STYLES
+       ------------------------------------------- */
+ :root {
+     --dark-bg: #121212;
+     --dark-card: #1a1a1a;
+     --light-text: #e5e7eb;
+     --subtle-text: #9ca3af;
+     --accent-color: #6366f1;
+     /* Indigo 500 - Primary link/button color */
+     --accent-light: #818cf8;
+     --border-color: #374151;
+     --max-width: 1280px;
+ }
+
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: var(--dark-bg);
+     color: var(--light-text);
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     line-height: 1.6;
+ }
+
+ a {
+     color: var(--accent-color);
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+
+ a:hover {
+     color: var(--accent-light);
+ }
+
+ /* -------------------------------------------
+       2. HERO / FEATURED IMAGE BANNER
+       ------------------------------------------- */
+ .hero {
+     position: relative;
+     padding: 6rem 1rem;
+     text-align: center;
+     overflow: hidden;
+     margin-bottom: 2rem;
+     color: white;
+     background-color: #1f2937;
+     /* Dark fallback if image fails */
+     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+ }
+
+ /* Pseudo-element for the Blurred Background Image */
+ .hero::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     /* Image URL for the background banner */
+     background-image: url('https://placehold.co/1920x600/1f2937/ffffff?text=1920x600img');
+     background-size: cover;
+     background-position: center;
+     z-index: 1;
+     /* Keeps background behind text */
+
+     /* APPLY BLURRINESS AND TRANSPARENCY */
+     filter: blur(100px);
+     opacity: 0.6;
+     /* Adjust for transparency */
+     transform: scale(1.05);
+     /* Scales up slightly to hide blurred edges */
+ }
+
+ .hero-content {
+     position: relative;
+     z-index: 2;
+     /* Ensures text is on top of the blurred image */
+     max-width: 900px;
+     margin: 0 auto;
+ }
+
+ .hero-content h1 {
+     font-size: 2.5rem;
+     font-weight: 800;
+     letter-spacing: -0.05em;
+     margin-bottom: 0.5rem;
+
+     /* Gradient Text Effect */
+     background: linear-gradient(to right, var(--accent-color), var(--accent-light));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     color: transparent;
+
+     transition: transform 0.5s ease;
+ }
+
+ .hero-content h1:hover {
+     transform: scale(1.02);
+ }
+
+ .hero-content .meta {
+     font-size: 1rem;
+     color: var(--subtle-text);
+ }
+
+ /* -------------------------------------------
+       3. LAYOUT CONTAINER & RESPONSIVENESS
+       ------------------------------------------- */
+ .container {
+     max-width: var(--max-width);
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 1rem;
+     display: flex;
+     flex-direction: column;
+     /* Stacked on mobile */
+     gap: 2.5rem;
+     flex-grow: 1;
+     padding-bottom: 4rem;
+ }
+
+ /* Desktop/Large Screens Layout (Side-by-side) */
+ @media (min-width: 1024px) {
+     .container {
+         flex-direction: row;
+         padding: 0 2rem;
+     }
+
+     .main {
+         flex: 2;
+         /* Main content takes 2/3 of the space */
+         max-width: 750px;
+     }
+
+     .right {
+         flex: 1;
+         /* Sidebar takes 1/3 of the space */
+         max-width: 350px;
+     }
+
+     .hero-content h1 {
+         font-size: 4rem;
+     }
+ }
+
+
+ /* -------------------------------------------
+       4. MAIN ARTICLE CONTENT STYLES
+       ------------------------------------------- */
+ .main {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     background-color: var(--dark-card);
+     padding: 2.5rem;
+     border-radius: 0.75rem;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+     opacity: 0;
+     animation: fade-in-up 0.5s ease-out forwards;
+     animation-delay: 0.1s;
+ }
+
+ /* General content typography */
+ .main p {
+     margin-bottom: 1.5rem;
+     font-size: 1.1rem;
+     color: var(--light-text);
+ }
+
+ .main h2 {
+     font-size: 2rem;
+     font-weight: 700;
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+     color: var(--accent-light);
+     border-bottom: 2px solid var(--border-color);
+     padding-bottom: 0.5rem;
+ }
+
+ .main img.inline-image {
+     width: 100%;
+     max-height: 400px;
+     object-fit: cover;
+     border-radius: 0.5rem;
+     margin: 1.5rem 0;
+     border: 1px solid var(--border-color);
+ }
+
+ /* -------------------------------------------
+       5. RIGHT SIDEBAR (FIXED CONTENT)
+       ------------------------------------------- */
+ .right {
+     width: 100%;
+     opacity: 0;
+     animation: fade-in-up 0.5s ease-out forwards;
+     animation-delay: 0.3s;
+ }
+
+ .right-sidebar {
+     position: sticky;
+     top: 2rem;
+     background-color: var(--dark-card);
+     padding: 1.5rem;
+     border-radius: 0.75rem;
+     border: 1px solid var(--border-color);
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+ }
+
+ .right-sidebar h3 {
+     font-size: 1.25rem;
+     font-weight: 600;
+     padding-bottom: 0.75rem;
+     margin-bottom: 1rem;
+     border-bottom: 1px solid var(--border-color);
+ }
+
+ .right-sidebar ul {
+     list-style: none;
+     padding: 0;
+ }
+
+ .right-sidebar li {
+     margin-bottom: 0.75rem;
+     font-size: 0.9rem;
+ }
+
+ .right-sidebar li a {
+     color: var(--subtle-text);
+     transition: color 0.3s ease;
+ }
+
+ .right-sidebar li a:hover {
+     color: var(--light-text);
+ }
+
+ /* Newsletter specific styles */
+ .newsletter-section input[type="email"] {
+     background-color: #242424;
+ }
+
+ .newsletter-section button {
+     background-color: var(--accent-color);
+     transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+ .newsletter-section button:hover {
+     background-color: var(--accent-light) !important;
+     transform: translateY(-1px);
+ }
+
+ /* -------------------------------------------
+       6. FOOTER
+       ------------------------------------------- */
+ /*footer {
+     background-color: var(--dark-card);
+     color: var(--subtle-text);
+     padding: 2rem 1rem;
+     margin-top: auto;
+     text-align: center;
+     border-top: 1px solid var(--border-color);
+ }
+
+ footer .footer-content {
+     max-width: var(--max-width);
+     margin: 0 auto;
+     font-size: 0.875rem;
+ }*/
+
+ /* -------------------------------------------
+       7. KEYFRAMES
+       ------------------------------------------- */
+ @keyframes fade-in-up {
+     0% {
+         opacity: 0;
+         transform: translateY(10px);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }

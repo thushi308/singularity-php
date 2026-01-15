@@ -11,8 +11,8 @@
     --accent-color-1: #ff7518;
     --accent-color-2: hsl(24, 100%, 50%);
 
-    --primary-font: 'Poppins', sans-serif;
-    --secondary-font: 'Poppins', sans-serif;
+    --primary-font: 'Lexend', sans-serif;
+    --secondary-font: 'Lexend', sans-serif;
     --font-size-1: 1rem;
     --font-size-2: 1.5rem;
     --font-size-3: 2rem;
@@ -33,7 +33,7 @@
     --card-page-link-transition: all 0.3s ease-in-out;
     /*--cards-container-scrollbar-color: #3a317a;*/
     --cards-container-scrollbar-color: var(--accent-color-1);
-    --cards-container-scrollbar-width: 0.2rem;
+    --cards-container-scrollbar-width: 0.5rem;
     /* --cards-container-scrollbar-color: linear-gradient(to right, hsl(from var(--accent-color-1) calc(h + 5) s calc(l - 20)), hsl(from var(--section-even-background-color) calc(h - 5) s calc(l + 10)));
     --cards-container-scrollbar-width: calc((6 / 16) * 1rem);*/
 
@@ -61,7 +61,7 @@
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-weight: 350;
   font-style: normal;
@@ -120,6 +120,7 @@ section > .section-header > p {
     width: 100%;
     height: 100svh;   /* stable height */
     background-image: url("hero_image.jpg");
+    filter: brightness(60%);
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -154,6 +155,8 @@ section.hero-section {
     bottom: 0;
     right: 0;
     padding: 0.8rem;
+    font-style: italic;
+    font-size: 0.8rem;
 }
 .hero-background-wrapper {
     background-image: url("hero_image.jpg");
@@ -192,6 +195,22 @@ section.hero-section {
     text-align: left;
 }
 
+.about-section > .section-header > div {
+    margin: 0.25rem 0;
+    font-weight: 300;
+    font-size: 1rem;
+    > ul {
+        margin-top: 1em;
+        padding-left: 3em;
+        font-size: inherit;
+        font-weight: inherit;
+        > li {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    }
+}
+
 /* .about-section > .card-img-container {
     height: 100%;
     object-fit: unset;
@@ -213,7 +232,7 @@ section.hero-section {
     }
     .about-section > .section-header {
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
     .card-img-container {
         margin-top: 5rem;
@@ -391,6 +410,9 @@ section.hero-section {
 
 .featured-events-section > .cards-container > .card {
     width: min(90%, 450px);
+    > .card-img-container {
+        filter: brightness(80%);
+    }
 }
 
 .gallery-section > .images-container {
@@ -674,7 +696,9 @@ footer > div > div > .quick-links > :first-child {
 }
 
 footer > div > div > .quick-links > a {
-    padding: 0.5rem 0
+    padding: 0.5rem 0;
+    display: flex;
+    gap: 5px;
 }
 
 footer > div > div > .quick-links > a > i {
@@ -748,10 +772,10 @@ footer > div > div > .footer-img > img {
 
 footer > .copyrights {
     padding: 1rem;
-    text-align: center;
+    text-align: right;
     flex: 1 1 100%;
     display: block;
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     font-weight: 400;
     background: black;
 }

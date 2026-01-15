@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Title",
+        "description": "A good desc",
+        "image": "BlogPage/data/blog-1/card.jpg",
+        "authorImg": "BlogPage/data/blog-1/author.jpg",
+        "authorName": "Alok",
+        "authorRole": "Good member",
+        "date": "15 December 2025",
+        "link": "BlogPage/index.php?id=blog-1",
+        "tags": [
+            "AI",
+            "technology"
+        ]
+    }
+]

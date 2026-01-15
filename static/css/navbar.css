@@ -60,7 +60,7 @@ nav a, nav .sidebar > div > div > :first-child {
     text-decoration: none;
     color: var(--accent-color);
     cursor: pointer;
-    padding: 20px 15px;
+    padding: 20px 8px;
     line-height: 30px;
 }
 
@@ -152,6 +152,7 @@ nav .sidebar > div > div > :first-child > span > svg {
     nav a, nav .sidebar > div div {
         width: 100%;
         text-align: center;
+        z-index: 0;
     }
     nav a, nav .sidebar > div > div > :first-child {
         padding: 0.25rem;
