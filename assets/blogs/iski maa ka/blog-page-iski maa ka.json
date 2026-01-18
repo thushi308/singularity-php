@@ -1,0 +1,19 @@
+{
+    "title": "Alok",
+    "institute": "alok",
+    "desc": "alok",
+    "author": {
+        "name": "alok",
+        "image": "data/iski maa ka/author.png",
+        "desc": "alok"
+    },
+    "date": "alok",
+    "image": "data/iski maa ka/hero.png",
+    "contents": [
+        {
+            "heading": "alok",
+            "content": "alok",
+            "image": "data/iski maa ka/section_0.png"
+        }
+    ]
+}

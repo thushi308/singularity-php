@@ -1,4 +1,5 @@
  /* -------------------------------------------
+    BLOG.css
        1. CSS VARIABLES & BASE STYLES
        ------------------------------------------- */
  :root {
@@ -30,7 +31,7 @@
  }
 
  a {
-     color: var(--accent-color);
+     /* color: var(--accent-color); */
      text-decoration: none;
      transition: color 0.3s ease;
  }

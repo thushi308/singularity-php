@@ -1,0 +1,19 @@
+{
+    "title": "Alok",
+    "institute": "alok",
+    "desc": "alok",
+    "author": {
+        "name": "alok",
+        "image": "data/blog-3/author.png",
+        "desc": "alok"
+    },
+    "date": "alok",
+    "image": "data/blog-3/hero.png",
+    "contents": [
+        {
+            "heading": "alok",
+            "content": "aok",
+            "image": "data/blog-3/section_0.png"
+        }
+    ]
+}

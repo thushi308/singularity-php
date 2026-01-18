@@ -1,4 +1,5 @@
 <?php
+    define("__ROOT__",__DIR__."/");
     $includes_location_prefix = "classes/";
     $static_js_location_prefix = "static/js/";
     $static_css_location_prefix = "static/css/";
@@ -8,4 +9,5 @@
     $blogs_location_prefix = "assets/blogs/";
     $events_location_prefix = "assets/events/";
     $listing_pages_location_prefix = "assets/";
+    $json_template_location_prefix = "json templates/";
 ?>

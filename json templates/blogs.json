@@ -12,5 +12,31 @@
             "AI",
             "technology"
         ]
+    },
+    {
+        "title": "alok",
+        "description": "alok",
+        "image": "",
+        "authorImg": "alok",
+        "authorName": "alok",
+        "authorRole": "alok",
+        "date": "alok",
+        "link": "BlogPage/index.php?id=Alok",
+        "tags": [
+            "alok"
+        ]
+    },
+    {
+        "title": "alok",
+        "description": "alok",
+        "image": "alok",
+        "authorImg": "",
+        "authorName": "alok",
+        "authorRole": "alok",
+        "date": "alok",
+        "link": "BlogPage/index.php?id=iski maa ka",
+        "tags": [
+            "alok"
+        ]
     }
 ]

@@ -1,29 +1,42 @@
-{
-    "title": "Title",
-    "institute": "Institute",
-    "desc": "Introduction With Quotes\nAll of the biggest technological inventions created by man - the airplane, the automobile, the computer - says little about his intelligence, but speaks volumes about his laziness",
-    "author": {
-        "name": "Author",
-        "image": "https://placehold.co/60x60/4f46e5/ffffff?text=Photo",
-        "desc": "A very Good author"
+[
+    {
+        "title": "Title",
+        "description": "A good desc",
+        "image": "BlogPage/data/blog-1/card.jpg",
+        "authorImg": "BlogPage/data/blog-1/author.jpg",
+        "authorName": "Alok",
+        "authorRole": "Good member",
+        "date": "15 December 2025",
+        "link": "BlogPage/index.php?id=blog-1",
+        "tags": [
+            "AI",
+            "technology"
+        ]
     },
-    "date": "",
-    "image": "",
-    "contents": [
-        {
-            "heading": "Heading 1",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia officiis nihil praesentium dolorum a. Et, quidem. Illum, ipsa. Quidem reiciendis incidunt harum magnam placeat molestias nesciunt, neque suscipit laboriosam cumque nulla. Rerum non quisquam adipisci animi, suscipit odit quidem aspernatur sint quae sequi, cum quaerat nihil enim repudiandae! Voluptas harum necessitatibus explicabo fugiat. Corporis nobis, quia veniam maxime eum beatae obcaecati facere accusantium neque eveniet, rerum dicta accusamus molestiae unde. Commodi nesciunt, officiis nostrum, velit debitis corporis cum expedita ex voluptas culpa provident odit! Mollitia vel consectetur facilis natus dolore commodi reiciendis reprehenderit, error ad eaque rem blanditiis voluptatum voluptatibus.",
-            "image": "https://placehold.co/800x400/282828/ffffff?text=Image-1"
-        },
-        {
-            "heading": "Heading 2",
-            "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore error voluptates sed fuga dignissimos dolore expedita harum! Qui natus repudiandae dolore. Neque deserunt praesentium porro aut sapiente qui incidunt amet odit ipsam veniam suscipit maiores pariatur mollitia vel similique, ducimus et nemo fuga necessitatibus hic atque. Placeat numquam, quis quibusdam illum commodi veniam incidunt, magnam earum dolore facere architecto. Perspiciatis at quidem molestias vel distinctio reprehenderit, aut, ipsam eos consectetur eum nisi, quas dolor. Iure perspiciatis deserunt voluptates omnis ipsa ut facilis enim mollitia, rerum placeat saepe velit et. Nihil repellendus reprehenderit est architecto sit delectus sed officia aperiam similique.\n\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem deleniti placeat accusantium est provident qui, consequuntur fuga voluptatum doloremque voluptatibus. Odio quas nulla voluptatum facilis alias, voluptate consequatur reiciendis id obcaecati fugiat quisquam ratione placeat provident debitis magnam cumque, atque molestiae, quis aliquid explicabo? Sit, iure voluptas obcaecati suscipit libero sunt laborum saepe numquam molestiae earum quae corporis laboriosam, doloremque distinctio quidem doloribus odio delectus dolorem repellat inventore! Quisquam consequuntur modi aliquam dignissimos? Nostrum culpa, repellat nulla excepturi, debitis quis vero nihil totam qui ex sit temporibus. Quibusdam ea placeat perspiciatis necessitatibus soluta facere reiciendis temporibus voluptatem accusamus. Earum, sapiente.",
-            "image": ""
-        },
-        {
-            "heading": "Heading 3",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, pariatur temporibus. Minus vel cupiditate enim rerum doloremque, veritatis perspiciatis necessitatibus eum ducimus pariatur debitis nobis temporibus corporis consequatur neque deleniti at, eos in, id animi. Illo magnam numquam eius? Quod ipsam itaque repudiandae tempore impedit. Voluptates consectetur explicabo iure culpa?",
-            "image": ""
-        }
-    ]
-}
+    {
+        "title": "alok",
+        "description": "alok",
+        "image": "",
+        "authorImg": "alok",
+        "authorName": "alok",
+        "authorRole": "alok",
+        "date": "alok",
+        "link": "BlogPage/index.php?id=Alok",
+        "tags": [
+            "alok"
+        ]
+    },
+    {
+        "title": "alok",
+        "description": "alok",
+        "image": "alok",
+        "authorImg": "",
+        "authorName": "alok",
+        "authorRole": "alok",
+        "date": "alok",
+        "link": "BlogPage/index.php?id=iski maa ka",
+        "tags": [
+            "alok"
+        ]
+    }
+]

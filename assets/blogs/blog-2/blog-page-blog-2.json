@@ -1,0 +1,19 @@
+{
+    "title": "aaaaaaaaaaaaaaaaaaa",
+    "institute": "alok",
+    "desc": "aaaaaaaaaaaaaaaa",
+    "author": {
+        "name": "Alok",
+        "image": "data/blog-2/author.png",
+        "desc": "aaaaaaaaaaaaaaa"
+    },
+    "date": "aaaaaaaaaaaaaaa",
+    "image": "assets/blogs/blog-2/hero.jpg",
+    "contents": [
+        {
+            "heading": "This Is A BLOG",
+            "content": "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "image": "assets/blogs/blog-2/section_0.jpeg"
+        }
+    ]
+}

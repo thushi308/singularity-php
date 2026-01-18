@@ -1,0 +1,15 @@
+{
+    "title": "Event2",
+    "date": "15 December, 2025",
+    "time": "7:00 PM to 5:00 AM",
+    "location": "RNT",
+    "details": "ABCD",
+    "poster": "assets/events/event 2/poster.jpg",
+    "whatHappened": "ASDFGHJK",
+    "author": {
+        "bio": "abcs",
+        "image": "assets/events/event 2/author.jpg"
+    },
+    "resources": [],
+    "gallery": []
+}

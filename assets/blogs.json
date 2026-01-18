@@ -1,16 +1,67 @@
 [
     {
-        "title": "Title",
-        "description": "A good desc",
-        "image": "BlogPage/data/blog-1/card.jpg",
-        "authorImg": "BlogPage/data/blog-1/author.jpg",
+        "title": "This is Blog1",
+        "description": "This is a test blog",
+        "image": "BlogPage/data/blog-1/card.png",
+        "authorImg": "BlogPage/data/blog-1/author.png",
         "authorName": "Alok",
-        "authorRole": "Good member",
-        "date": "15 December 2025",
-        "link": "blog.php?id=blog1",
+        "authorRole": "Co-founder",
+        "date": "January 17, 2026",
+        "link": "BlogPage/index.php?id=blog-1",
         "tags": [
-            "AI",
+            "AI"
+        ]
+    },
+    {
+        "title": "Alok",
+        "description": "alok",
+        "image": "assets/blogs/blog-3/card.png",
+        "authorImg": "BlogPage/data/blog-3/author.png",
+        "authorName": "alok",
+        "authorRole": "alok",
+        "date": "alok",
+        "link": "BlogPage/index.php?id=blog-3",
+        "tags": [
+            "alok"
+        ]
+    },
+    {
+        "title": "Alok",
+        "description": "alok",
+        "image": "assets/blogs/iski maa ka/card.png",
+        "authorImg": "assets/blogs/iski maa ka/author.png",
+        "authorName": "alok",
+        "authorRole": "alok",
+        "date": "alok",
+        "link": "blog.php?id=iski maa ka",
+        "tags": [
+            "alok"
+        ]
+    },
+    {
+        "title": "aaaaaaaaaaaaaaaaaaa",
+        "description": "aaaaaaaaaaaaaaaa",
+        "image": "assets/blogs/blog-2/card.png",
+        "authorImg": "assets/blogs/blog-2/author.png",
+        "authorName": "Alok",
+        "authorRole": "alok",
+        "date": "aaaaaaaaaaaaaaa",
+        "link": "blog.php?id=blog-2",
+        "tags": [
             "technology"
+        ]
+    },
+    {
+        "title": "A serious Blog",
+        "description": "this is a serious blog",
+        "image": "assets/blogs/Blog-5/card.png",
+        "authorImg": "assets/blogs/Blog-5/author.jpg",
+        "authorName": "Alok",
+        "authorRole": "alok",
+        "date": "15 December, 2025",
+        "link": "blog.php?id=Blog-5",
+        "tags": [
+            "research"
         ]
     }
 ]

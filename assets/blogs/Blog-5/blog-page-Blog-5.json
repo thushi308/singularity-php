@@ -1,0 +1,19 @@
+{
+    "title": "A serious Blog",
+    "institute": "IISC",
+    "desc": "this is a college",
+    "author": {
+        "name": "Alok",
+        "image": "assets/blogs/Blog-5/author.jpg",
+        "desc": "alok"
+    },
+    "date": "15 December, 2025",
+    "image": "assets/blogs/Blog-5/hero.png",
+    "contents": [
+        {
+            "heading": "alok",
+            "content": "some content",
+            "image": ""
+        }
+    ]
+}

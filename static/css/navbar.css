@@ -58,7 +58,7 @@ nav > :first-child, nav .sidebar > div {
 
 nav a, nav .sidebar > div > div > :first-child {
     text-decoration: none;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
     cursor: pointer;
     padding: 20px 8px;
     line-height: 30px;
